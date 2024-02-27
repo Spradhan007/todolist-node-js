@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: aqua;
+
+        }
+        h1{
+            background-color: bisque;
+            margin: auto;
+            width: 50%;
+            padding: 10px;
+        }
+        .container{
+            border: 3px solid;
+            margin: auto;
+            width: 50%;
+            padding: 10px;
+        }
+        ul{
+            list-style-type: square;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1><%= todaydate %></h1>
+<div class="container">
+    <ul>Buy food</ul>
+    <ul>Cook food</ul>
+    <ul>Eat food</ul>
+   <%   for(i=0; i<newListItem.length; i++){ %>
+    <li><%= newListItem[i]%></li>
+  <%  } %>
+    <form action="" method="post">
+        <input type="text" name="newItem" autocomplete="off">
+       <button type="submit">Add</button>
+    </form>
+</div>
+</body>
+</html>
